@@ -1,12 +1,12 @@
-func printAge(name: String) {
-    print("\(name) is 29")
+func printAge(name: String) -> String{
+    return "\(name) is 29"
 }
 
-printAge("Adam")
+printAge(name: "Adam")
 
 
-func happyBirthday(age: Int) {
-    print("Happy birthday #\(age)!")
+func happyBirthday(age: Int) -> String{
+    return "Happy birthday #\(age)!"
 }
 
 
@@ -15,23 +15,22 @@ func getAge(name: String) -> Int {
 }
 
 // Uncomment to see the error
-/*
-func badGetAge(name: String) -> Int {
-    print("\(name) is 29")
+
+func badGetAge(name: String) -> String {
+    return "\(name) is 29"
 }
-*/
 
 
 let friend = "Emily"
-var friendAge = getAge(friend)
-happyBirthday(friendAge)
+var friendAge = getAge(name: friend)
+happyBirthday(age: friendAge)
 
 
 func birthdayGreeting(age: Int) -> String {
     return "Happy birthday #\(age)!"
 }
 
-var greeting = birthdayGreeting(30)
+var greeting = birthdayGreeting(age: 30)
 print(greeting)
 
 
@@ -42,4 +41,12 @@ func getAgeAndCongratulate(name: String) -> Int {
 }
 
 let friend2 = "Pete"
-var friend2Age = getAgeAndCongratulate(friend2)
+var friend2Age = getAgeAndCongratulate(name: friend2)
+
+func matrixGreeting(lastName: String) -> String{
+
+    return "\(lastName) we've been expecting you.)"
+    
+}
+
+matrixGreeting(lastName: "Mr. Anderson")
